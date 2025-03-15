@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MEDIBuddy</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav__logo">MEDIBuddy</div>
+            <ul class="nav__links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="#">click to check</a></li>
+                <li class="link"><a href="about.html">About Us</a></li>
+            </ul>
+            <button class="btn toggle-mode">🌙 Dark Mode</button>
+        </nav>
+
+        <header class="header">
+            <div class="content">
+                <h1><span>AI-Powered </span><br />Multi-Organ Detection System</h1>
+                <p>
+                  "Our AI-powered system leverages advanced radiology imaging for fast, precise multi-organ detection, ensuring accurate diagnostics and better healthcare."
+                </p>
+                <button class="btn">click to check</button>
+            </div>
+            <div class="image">
+                <span class="image__bg"></span>
+                <img src="header-bg .png" alt="header image" />
+                <div class="image__content image__content__1">
+                  </div>
+            </div>
+        </header>
+        <br>
+        <hr>
+        <section class="organs">
+            <h2>Organs Detected</h2>
+            <div class="organs__container">
+              <div class="organ" data-info="The brain controls thoughts, memory, and coordination.">
+                <i class="ri-brain-line"></i>
+                <p>Brain</p>
+              </div>
+              <div class="organ" data-info="Breast tissue contains glands that produce milk for nursing infants.">
+                <i class="ri-women-line"></i>
+                <p>Breast</p>
+              </div>
+              <div class="organ" data-info="Kidneys filter waste from blood and balance body fluids.">
+                <i class="ri-water-flash-line"></i>
+                <p>Kidney</p>
+              </div>
+              <div class="organ" data-info="The liver detoxifies chemicals and metabolizes drugs.">
+                <i class="ri-heart-pulse-line"></i>
+                <p>Liver</p>
+              </div>
+              <div class="organ" data-info="Lungs help in breathing by exchanging oxygen and carbon dioxide.">
+                <i class="ri-lungs-line"></i>
+                <p>Lungs</p>
+              </div>
+            </div>
+            <div class="organ-info-box" id="organInfoBox"></div>
+          </section>
+          
+          
+    </div>
+
+
+    <script src="script.js"></script>
+    <hr>
+</body>
+<section class="medical-applications">
+  <h2> Applications of Multi-Organ Detection System</h2>
+  <div class="application">
+    <i class="ri-hospital-line"></i>
+    <h3>Early Disease Detection</h3>
+    <p>AI helps in identifying early signs of diseases like tumors, lung infections, and kidney stones.</p>
+  </div>
+  <div class="application">
+    <i class="ri-stethoscope-line"></i>
+    <h3>Improved Diagnosis</h3>
+    <p>Doctors can use AI-based analysis to cross-check and confirm diagnoses for better accuracy.</p>
+  </div>
+  <div class="application">
+    <i class="ri-file-medical-line"></i>
+    <h3>Faster Medical Reports</h3>
+    <p>Automated image processing reduces the time required for medical reports, leading to quicker treatment.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__content">
+    <p>&copy; 2025 MEDIBuddy. All Rights Reserved.</p>
+    <ul class="footer__links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </div>
+</footer>
+
+</html>

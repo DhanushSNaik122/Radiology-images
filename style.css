@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --primary-color: #28bf96;
+    --primary-color-dark: #209677;
+    --text-dark: #111827;
+    --text-light: #6b7280;
+    --white: #ffffff;
+    --bg-light: #f9f9f9;
+    --bg-dark: #1e1e1e;
+    --text-light-mode: #333;
+    --text-dark-mode: #f5f5f5;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light-mode);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark-mode);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .link a {
+    color: var(--text-dark-mode);
+}
+
+.btn {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.toggle-mode {
+    background-color: #333;
+    color: var(--white);
+}
+
+.dark-mode .toggle-mode {
+    background-color: var(--white);
+    color: #333;
+}
+
+.header {
+    padding: 0 1rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.content p {
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+}
+
+.dark-mode .content h1,
+.dark-mode .content p {
+    color: var(--text-dark-mode);
+}
+
+.image {
+    position: relative;
+    text-align: center;
+    isolation: isolate;
+}
+
+.image__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 450px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    max-width: 475px;
+}
+
+.image__content {
+    position: absolute;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .image__content {
+    background-color: #444;
+}
+
+@media (width < 900px) {
+    .nav__links {
+        display: none;
+    }
+
+    .header {
+        padding: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .image {
+        grid-area: 1/1/2/2;
+    }
+}
+
+.organs {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .organs h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+  }
+  
+  .organs__container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .organ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .organ:hover {
+    transform: scale(1.1);
+  }
+  
+  .organ i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .organ p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode .organs h2 {
+    color: var(--white);
+  }
+  
+  .dark-mode .organ {
+    background: #222;
+    color: var(--white);
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode .organ i {
+    color: var(--primary-color);
+  }
+  /* Dark Mode Fix for Organs Section */
+.dark-mode .organs h2 {
+    color: var(--white);
+  }
+  
+  .dark-mode .organ p {
+    color: var(--white);
+  }
+
+  /* Organ Info Box */
+.organ-info-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.9rem;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  /* Dark Mode Styling */
+  .dark-mode .organ-info-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+  
+  
+  .medical-applications {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--primary-light);
+    color: var(--text-dark);
+  }
+  
+  .medical-applications h2 {
+    font-size: 2rem;
+  }
+  
+  .application {
+    display: inline-block;
+    width: 30%;
+    min-width: 250px;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .application i {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .dark-mode .medical-applications {
+    background: #222;
+    color: var(--white);
+  }
+  .dark-mode .application {
+    background: #333;
+  }
+  
+
+
+
+
+
+
+  /* Footer Styles */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .footer__content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer__links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .footer__links li a {
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s;
+  }
+  
+  .footer__links li a:hover {
+    color: var(--text-dark);
+  }
+  
+  /* Dark Mode Footer */
+  .dark-mode .footer {
+    background: #222;
+    color: var(--white);
+  }
+  
+  .dark-mode .footer__links li a:hover {
+    color: var(--primary-color);
+  }
+  
